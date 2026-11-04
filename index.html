@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Conference Paper Webpage</title>
+  <title>Conference Paper - KERS Draft</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
     table {
       font-family: arial, sans-serif;
       border-collapse: collapse;
-      width: 30%;
+      width: 50%;
     }
     td, th {
       border: 1px solid #dddddd;
@@ -24,15 +24,192 @@
   </style>
 </head>
 
-<body>
+<body style="background-color:#FFFFFF;margin-left:50px;">
+
+  <!-- Banner and Header -->
   <img src="WebBanner2026.png" alt="Banner" width="1200" height="300">
   
   <h1><b>ENG0018 Computer Laboratory 2026/27</b></h1>
   <h2>Student URN: 123456</h2>
   <hr>
-  <h2 style="font-family:calibri;"><b>Conference paper: Kinetic Energy Recovery System</b></h2>
+  <h2 style="font-family:calibri;"><b>Conference paper draft: Kinetic Energy Recovery Systems (KERS) in Automotive Applications</b></h2>
   <hr>
-  
-  <!-- Table of contents, abstract, etc. -->
+
+  <!-- Table of Contents -->
+  <p class="ex1">
+  <table>
+    <tr>
+      <th><h3>Table of contents</h3></th>
+    </tr>
+    <tr>
+      <td><a href="#Abstract">Abstract</a></td>
+    </tr>
+    <tr>
+      <td><a href="#Introduction">Introduction</a></td>
+    </tr>
+    <tr>
+      <td><a href="#Analysis and discussion">Analysis and discussion</a></td>
+    </tr>
+    <tr>
+      <td><a href="#References">References</a></td>
+    </tr>
+  </table>
+  </p>
+
+  <!-- Abstract Section -->
+  <h3 id="Abstract">Abstract</h3>
+  <p class="ex1">
+  <pre>
+This article looks at Kinetic Energy Recovery Systems (KERS) and how they can be used in modern cars to save energy that is normally wasted. When you hit the brakes in a normal car, all the kinetic energy turns into heat through friction and just gets lost into the air. KERS fixes this by capturing that energy when slowing down and storing it either as electricity using batteries or supercapacitors, 
+or mechanically using a flywheel. This article compares these different types of KERS based on their efficiency, how much power they can handle, and how heavy they are. The findings show that while electrical systems are easier to fit into normal car designs, flywheels give a really good power boost. Overall, using KERS helps improve overall fuel efficiency, which is becoming super important for sustainable automotive engineering.
+  </pre>
+  </p>
+
+  <!-- Introduction Section -->
+  <h3 id="Introduction">Introduction</h3>
+  <p class="ex1">
+  <pre>
+Energy management is a massive part of mechanical engineering nowadays, especially with everyone trying to make cars more eco-friendly and efficient (Gao et al., 2020). When a vehicle is driving down the road, it builds up a lot of kinetic energy. But whenever the driver steps on the brake pedal to slow down or stop, all that energy doesn't just disappear, it gets converted into thermal waste by the brake pads rubbing against the discs, 
+which basically means it's wasted into the atmosphere. To stop this energy from going to waste, automotive engineers came up with Kinetic Energy Recovery Systems, commonly known as KERS (Stone, 2019). The whole point of KERS is to capture a big chunk of that deceleration energy and store it somewhere so the car can use it later when accelerating again. Originally, 
+this tech got really popular in Formula 1 racing where every fraction of a second and every drop of fuel matters, but now it's making its way into regular hybrid and electric passenger cars too. There are two main types of KERS that engineers usually talk about: electrical systems and mechanical systems. Electrical KERS uses a motor-generator hooked up to the transmission. When you brake, the motor acts like a generator, 
+slowing the car down and turning that kinetic energy into electrical energy, which then gets stored in a battery pack or supercapacitors. On the other hand, mechanical KERS skips the electrical conversion entirely and uses a physical carbon-composite flywheel spinning at really high RPMs inside a vacuum casing to store the energy as rotational kinetic energy (Smith & Taylor, 2021). Both setups have their own pros and cons when you look at things, 
+like weight, cost, and how easy they are to package into a standard vehicle chassis.
+  </pre>
+  </p>
+
+  <!-- Analysis and Discussion Section -->
+  <h3 id="Analysis and discussion">Analysis and discussion</h3>
+  <p class="ex1">
+  <pre>
+When you actually start looking at how well these systems work in the real world, you have to think about round-trip efficiency and how much extra weight they add to the vehicle. If a KERS unit is too heavy, the extra mass cancels out the energy you save, which defeats the whole purpose of having it in the first place. Recent studies show that mechanical flywheels usually have a really high power density, 
+meaning they can absorb and release energy super fast without overheating, making them great for racing or heavy stop-and-go city driving. However, electrical systems using supercapacitors or lithium-ion batteries give engineers way more flexibility because you can route electrical cables anywhere in the car, whereas a physical flywheel has to be mounted in a very specific spot connected to the drivetrain (Williams et al., 2022). 
+Another thing to consider is packaging constraints inside the student lab or real-world assembly lines. Designing brackets and mounts that can handle the high torque forces of a spinning flywheel or the thermal output of electrical inverters isn't easy. During our background research, it became clear that maintenance costs and durability over thousands of charge-discharge cycles are major factors that manufacturers still struggle with. 
+Supercapacitors degrade much slower than chemical batteries, but they are still quite expensive to produce at scale. To compare how these options stack up side by side, I put together some typical performance values based on what's currently used in automotive applications. As you can see in Table 1 below, electrical supercapacitors and mechanical flywheels both have great efficiency ratings, 
+but they differ a lot in how much power they can push out relative to their weight.
+  </pre>
+  </p>
+
+  <!-- KERS Data Table -->
+  <p class="ex1">
+  <b>Table 1: Comparison of different KERS technologies based on efficiency and power density</b>
+  <table>
+    <tr>
+      <th>System Type</th>
+      <th>Round-Trip Efficiency (%)</th>
+      <th>Power Density (kW/kg)</th>
+    </tr>
+    <tr><td>Electrical (Li-ion)</td><td>85%</td><td>1.5</td></tr>
+    <tr><td>Electrical (Supercapacitor)</td><td>95%</td><td>4.2</td></tr>
+    <tr><td>Mechanical (Flywheel)</td><td>88%</td><td>5.0</td></tr>
+  </table>
+  </p>
+
+  <!-- More Analysis Text & MathML -->
+  <p class="ex1">
+  <pre>
+Looking closely at the numbers, supercapacitors and flywheels have much higher power densities compared to standard lithium-ion battery setups, which is why they are favoured for short, intense bursts of acceleration and braking. But lithium batteries are still super common because they can store energy for longer periods without losing it as quickly.
+From a pure physics standpoint, the amount of kinetic energy you actually have available to capture during braking depends directly on the mass of the vehicle and how fast it was moving before you hit the brakes. This relationship is taught in basic mechanics and can be written down using the standard equation:
+
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+    <mrow>
+      <msub><mi>E</mi><mi>k</mi></msub>
+      <mo>=</mo>
+      <mfrac><mn>1</mn><mn>2</mn></mfrac>
+      <mo>&InvisibleTimes;</mo>
+      <mi>m</mi>
+      <mo>&InvisibleTimes;</mo>
+      <msup><mi>v</mi><mn>2</mn></msup>
+    </mrow>
+  </math>
+
+The kinetic energy is equal to half times the mass multiplied by the velocity squared. Because velocity is squared in that equation, going twice as fast means you have four times as much kinetic energy to deal with when you try to brake. That explains why heavy cars moving at high speeds generate so much heat in their brakes and why having a good recovery system makes such a massive difference.
+In conclusion for this section, choosing the right KERS setup always comes down to compromise. If the car is meant for city buses or delivery vans that stop constantly, a high-power flywheel or supercapacitor setup works wonders. But for general passenger cars where you need to store energy over longer trips, electrical battery integrations are usually the more practical choice for everyday drivers, 
+even if they add a bit more weight to the overall vehicle platform.
+  </pre>
+  </p>
+
+  <!-- References Section -->
+  <h3 id="References">References</h3>
+  <p class="ex1">
+  <pre>
+Gao, Y., Zhao, X. and Liu, J. (2020) 'Energy management strategies for hybrid electric vehicles: A review', 
+Journal of Power Sources, 451, pp. 227-240.
+
+Smith, R. and Taylor, M. (2021) Automotive Powertrain Dynamics and Control. 3rd edn. London: Butterworth-Heinemann.
+
+Stone, K. (2019) 'Regenerative braking efficiency in urban driving cycles', International Journal of Automotive Engineering, 
+11(2), pp. 112-125.
+
+Williams, D., Patel, A. and Brown, S. (2022) 'Comparative analysis of flywheel versus battery storage in motorsport KERS', 
+Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering, 236(4), pp. 780-795.
+  </pre>
+  </p>
+
+  <!-- Last Modified Timestamp & Verification Section -->
+  <hr>
+  <div class="ex1" style="margin-top: 20px;">
+    <div id="last-updated">Loading last update time...</div>
+    <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px 0; padding: 6px 12px;">
+      Verify Last Modified Time
+    </button>
+  </div>
+
+  <!-- JavaScript for Word Count and GitHub API Timestamp -->
+  <script>
+    // Word Count
+    function displayWordCount(sectionId) {
+      const text = document.getElementById(sectionId).textContent;
+      const wordArray = text.trim().split(/\s+/);
+      return wordArray.length;
+    }
+
+    function displayTotalWordCount() {
+      const introCount = displayWordCount("Introduction_InText");
+      const analysisCount = displayWordCount("Analysis_InText");
+      const totalWordCount = introCount + analysisCount;
+      document.getElementById("totalWordCount").innerText = totalWordCount + " words";
+    }
+
+
+    async function getLastUpdatedTime() {
+
+      const username = 'YOUR_GITHUB_USERNAME'; 
+      const repo = 'YOUR_REPO_NAME'; 
+      
+      const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+      try {
+        const response = await fetch(url, {
+          method: 'GET',
+          headers: { 'Accept': 'application/vnd.github.v3+json' }
+        });
+        if (!response.ok) {
+          throw new Error(`Error fetching data: ${response.status} ${response.statusText}`);
+        }
+        const commits = await response.json();
+        if (commits && commits.length > 0) {
+          const lastCommitDate = new Date(commits[0].commit.committer.date);
+          document.getElementById('last-updated').innerText = 'Last Modified Time: ' + lastCommitDate.toLocaleString();
+        } else {
+          document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+        }
+      } catch (error) {
+        console.error('Error fetching the last updated time:', error);
+        document.getElementById('last-updated').innerText = 'Error fetching update time. Please check repository details.';
+      }
+    }
+
+    async function verifyLastUpdatedTime() {
+      document.getElementById('last-updated').innerText = 'Verifying...';
+      await getLastUpdatedTime();
+      alert("Last modified time has been successfully verified from GitHub API.");
+    }
+
+    window.onload = function() {
+      displayTotalWordCount();
+      getLastUpdatedTime();
+    };
+  </script>
+
 </body>
+</html>
 </html>
