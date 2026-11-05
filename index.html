@@ -90,8 +90,9 @@ and how easy they are to package into a standard vehicle chassis.
 
   <!-- Analysis and Discussion Section -->
   <h3 id="Analysis and discussion">Analysis and discussion</h3>
-  <p class="ex1">
-  <pre id="Analysis_InText" style="font-family: inherit;">
+  <div id="Analysis_InText">
+    <p class="ex1">
+    <pre style="font-family: inherit;">
 When you actually start looking at how well these systems work in the real world, you have to think about round-trip efficiency and how much extra weight 
 they add to the vehicle. If a KERS unit is too heavy, the extra mass cancels out the energy you save, which defeats the whole purpose of having it in the first place. 
 Recent studies show that mechanical flywheels usually have a really high power density, meaning they can absorb and release energy super fast without overheating, 
@@ -104,53 +105,57 @@ manufacturers still struggle with. Supercapacitors degrade much slower than chem
 To compare how these options stack up side by side, I put together some typical performance values based on what's currently used in automotive applications. 
 As you can see in Table 1 below, electrical supercapacitors and mechanical flywheels both have great efficiency ratings, but they differ a lot in how much
 power they can push out relative to their weight.
-  </pre>
-  </p>
+    </pre>
+    </p>
 
   <!-- KERS Data Table -->
-  <p class="ex1">
-  <b>Table 1: Comparison of different KERS technologies based on efficiency and power density</b>
-  <table>
-    <tr>
-      <th>System Type</th>
-      <th>Round-Trip Efficiency (%)</th>
-      <th>Power Density (kW/kg)</th>
-    </tr>
-    <tr><td>Electrical (Li-ion)</td><td>85%</td><td>1.5</td></tr>
-    <tr><td>Electrical (Supercapacitor)</td><td>95%</td><td>4.2</td></tr>
-    <tr><td>Mechanical (Flywheel)</td><td>88%</td><td>5.0</td></tr>
-  </table>
-  </p>
+    <p class="ex1">
+    <b>Table 1: Comparison of different KERS technologies based on efficiency and power density</b>
+    <table>
+      <tr>
+        <th>System Type</th>
+        <th>Round-Trip Efficiency (%)</th>
+        <th>Power Density (kW/kg)</th>
+      </tr>
+      <tr><td>Electrical (Li-ion)</td><td>85%</td><td>1.5</td></tr>
+      <tr><td>Electrical (Supercapacitor)</td><td>95%</td><td>4.2</td></tr>
+      <tr><td>Mechanical (Flywheel)</td><td>88%</td><td>5.0</td></tr>
+    </table>
+    </p>
 
   <!-- More Analysis Text & MathML -->
-  <p class="ex1">
-  <pre>
+    <p class="ex1">
+    <pre style="font-family: inherit;">
 Looking closely at the numbers, supercapacitors and flywheels have much higher power densities compared to standard lithium-ion battery setups, 
 which is why they are favoured for short, intense bursts of acceleration and braking. But lithium batteries are still super common because they can store 
 energy for longer periods without losing it as quickly. From a pure physics standpoint, the amount of kinetic energy you actually have available to 
 capture during braking depends directly on the mass of the vehicle and how fast it was moving before you hit the brakes. 
 This relationship is taught in basic mechanics and can be written down using the standard equation:
+    </pre>
+    </p>
 
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
-    <mrow>
-      <msub><mi>E</mi><mi>k</mi></msub>
-      <mo>=</mo>
-      <mfrac><mn>1</mn><mn>2</mn></mfrac>
-      <mo>&InvisibleTimes;</mo>
-      <mi>m</mi>
-      <mo>&InvisibleTimes;</mo>
-      <msup><mi>v</mi><mn>2</mn></msup>
-    </mrow>
-  </math>
-
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mrow>
+        <msub><mi>E</mi><mi>k</mi></msub>
+        <mo>=</mo>
+        <mfrac><mn>1</mn><mn>2</mn></mfrac>
+        <mo>&InvisibleTimes;</mo>
+        <mi>m</mi>
+        <mo>&InvisibleTimes;</mo>
+        <msup><mi>v</mi><mn>2</mn></msup>
+      </mrow>
+    </math>
+    <p class="ex1">
+    <pre style="font-family: inherit;">
 The kinetic energy is equal to half times the mass multiplied by the velocity squared. Because velocity is squared in that equation, going twice as fast means you have
 four times as much kinetic energy to deal with when you try to brake. This explains why heavy cars moving at high speeds generate so much heat in their brakes and why 
 having a good recovery system makes such a massive difference. In conclusion for this section, choosing the right KERS setup always comes down to compromise. 
 If the car is meant for city buses or delivery vans that stop constantly, a high-power flywheel or supercapacitor setup works wonders. But for general passenger cars 
 where you need to store energy over longer trips, electrical battery integrations are usually the more practical choice for everyday drivers, 
 even if they add a bit more weight to the overall vehicle platform.
-  </pre>
-  </p>
+    </pre>
+    </p>
+  </div>
 
   <!-- References Section -->
   <h3 id="References">References</h3>
