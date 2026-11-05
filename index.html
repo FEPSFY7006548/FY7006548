@@ -72,7 +72,7 @@ Overall, using KERS helps improve overall fuel efficiency, which is becoming sup
   <!-- Introduction Section -->
   <h3 id="Introduction">Introduction</h3>
   <p class="ex1">
-  <pre>
+  <pre id="Introduction_InText">
 Energy management is a massive part of mechanical engineering nowadays, especially with everyone trying to make cars more eco-friendly and efficient (Gao et al., 2020). 
 When a vehicle is driving down the road, it builds up a lot of kinetic energy. But whenever the driver steps on the brake pedal to slow down or stop, 
 all that energy doesn't just disappear, it gets converted into thermal waste by the brake pads rubbing against the discs, 
@@ -91,7 +91,7 @@ and how easy they are to package into a standard vehicle chassis.
   <!-- Analysis and Discussion Section -->
   <h3 id="Analysis and discussion">Analysis and discussion</h3>
   <p class="ex1">
-  <pre>
+  <pre id="Analysis_InText" style="font-family: inherit;">
 When you actually start looking at how well these systems work in the real world, you have to think about round-trip efficiency and how much extra weight 
 they add to the vehicle. If a KERS unit is too heavy, the extra mass cancels out the energy you save, which defeats the whole purpose of having it in the first place. 
 Recent studies show that mechanical flywheels usually have a really high power density, meaning they can absorb and release energy super fast without overheating, 
@@ -203,9 +203,8 @@ Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Autom
 
   // --- GitHub API Timestamp Function (Lab H3 Objective 3.3) ---
   async function getLastUpdatedTime() {
-    // ⚠️ UPDATE THESE WITH YOUR ACTUAL GITHUB USERNAME AND REPO NAME ⚠️
-    const username = 'YOUR_GITHUB_USERNAME'; 
-    const repo = 'YOUR_REPO_NAME'; 
+    const username = 'FEPSFY7006548'; 
+    const repo = 'FY7006548'; 
     
     const url = `https://api.github.com/repos/${username}/${repo}/commits`;
     try {
