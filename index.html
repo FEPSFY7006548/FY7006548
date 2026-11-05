@@ -168,61 +168,78 @@ Williams, D., Patel, A. and Brown, S. (2022) 'Comparative analysis of flywheel v
 Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering, 236(4), pp. 780-795.
   </pre>
   </p>
+<!-- Automated Word Count Display (Lab H3 Objective 3.4) -->
+<hr>
+<p class="ex1">
+  <b>Total word count:</b> <span id="totalWordCount">Calculating word count...</span>
+</p>
+
+<!-- Validated Timestamp & Verification Button (Lab H3 Objective 3.3) -->
+<hr>
+<div class="ex1" style="margin-top: 20px;">
+  <div id="last-updated">Loading last update time...</div>
+  <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px 0; padding: 6px 12px;">
+    Verify Last Modified Time
+  </button>
+</div>
+
+<!-- JavaScript for Word Count and GitHub API Timestamp -->
 <script>
-    async function getLastUpdatedTime() {
-        const username = 'FEPSFY6966093';
-        const repo = 'FY6966093';
+  // --- Word Count Function (Lab H3 Objective 3.4) ---
+  function displayWordCount(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (!element) return 0;
+    const text = element.textContent;
+    const wordArray = text.trim().split(/\s+/);
+    return wordArray.length;
+  }
 
-        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-        try {
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                }
-            });
-            if (!response.ok) {
-                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
-            }
-            const commits = await response.json();
-            if (commits && commits.length > 0) {
-                const lastCommitDate = new Date(commits[0].commit.committer.date);
+  function displayTotalWordCount() {
+    const introCount = displayWordCount("Introduction_InText");
+    const analysisCount = displayWordCount("Analysis_InText");
+    const totalWordCount = introCount + analysisCount;
+    document.getElementById("totalWordCount").innerText = totalWordCount;
+  }
 
-                // Displaying the time on load
-                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-            } else {
-                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
-            }
-        } catch (error) {
-            console.error('Error fetching the last updated time:', error);
-            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
-        }
+  // --- GitHub API Timestamp Function (Lab H3 Objective 3.3) ---
+  async function getLastUpdatedTime() {
+    // ⚠️ UPDATE THESE WITH YOUR ACTUAL GITHUB USERNAME AND REPO NAME ⚠️
+    const username = 'YOUR_GITHUB_USERNAME'; 
+    const repo = 'YOUR_REPO_NAME'; 
+    
+    const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+    try {
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: { 'Accept': 'application/vnd.github.v3+json' }
+      });
+      if (!response.ok) {
+        throw new Error(`Error fetching data: ${response.status} ${response.statusText}`);
+      }
+      const commits = await response.json();
+      if (commits && commits.length > 0) {
+        const lastCommitDate = new Date(commits[0].commit.committer.date);
+        document.getElementById('last-updated').innerText = 'Last Modified Time: ' + lastCommitDate.toLocaleString();
+      } else {
+        document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+      }
+    } catch (error) {
+      console.error('Error fetching the last updated time:', error);
+      document.getElementById('last-updated').innerText = 'Error fetching update time. Please check repository details.';
     }
-    // Function to verify the last update time by re-fetching it from the API
-    async function verifyLastUpdatedTime() {
-        document.getElementById('last-updated').innerText = 'Verifying...';
-        await getLastUpdatedTime();
-        alert("Last modified time has been successfully verified from GitHub API.");
-    }
+  }
 
-    // ---------- Word count ----------
-    // Function to calculate word count for a specified section
-    function displayWordCount(sectionId) {
-      const section = document.getElementById(sectionId);
-      if (!section) return 0;
-      const text = section.textContent.trim();
-      return text === '' ? 0 : text.split(/\s+/).length;
-    }
-    // Function to calculate and display total word count from selected sections
-    function displayTotalWordCount() {
-      const IntroductionCount = displayWordCount("Introduction_InText");
-      const AnalysisCount = displayWordCount("Analysis_InText");
-      const totalWordCount = IntroductionCount + AnalysisCount;
-      document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-    }
-    // Run both functions when the page loads
-    window.addEventListener('load', getLastUpdatedTime);
-    window.addEventListener('load', displayTotalWordCount);
-  </script>
+  async function verifyLastUpdatedTime() {
+    document.getElementById('last-updated').innerText = 'Verifying...';
+    await getLastUpdatedTime();
+    alert("Last modified time has been successfully verified from GitHub API.");
+  }
+
+  // Run both automated scripts when the page loads
+  window.onload = function() {
+    displayTotalWordCount();
+    getLastUpdatedTime();
+  };
+</script>
 </body>
 </html>
